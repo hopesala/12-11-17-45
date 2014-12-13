@@ -60,11 +60,10 @@ background-attachment: fixed;}
 <ul id="myTab" class="nav nav-tabs">
    <li class="active"><a href="#home" data-toggle="tab">
       主         页</a></li>
-   <li><a href="#ios" data-toggle="tab">宣传视频</a></li>
    <li class="dropdown">
-      <a href="poster.html" id="myTabDrop1" class="dropdown-toggle" 
+      <a href="aboutus.html" id="myTabDrop1" class="dropdown-toggle" 
          data-toggle="dropdown">
-         联系我们</a>
+         关于我们</a>
      
    </li>
 </ul>
