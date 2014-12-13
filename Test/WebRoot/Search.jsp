@@ -3,6 +3,8 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+<%@ page import ="com.ht.servlet.*"%>
+<%@ page import="java.sql.*"%>
 <!-- 新 Bootstrap 核心 CSS 文件 -->
 <link href="http://apps.bdimg.com/libs/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 
@@ -35,7 +37,71 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 <body>
- 
+ <form method="POST" action="search" class="well form-search">
+<div style="margin:0 auto;width:600px;">
+<span class="glyphicon glyphicon-user" style="color: rgb(216, 104, 141); font-size: 25px;">
+可选老师列表[可点击老师姓名立即预约]：<br>
+<hr>
+ <%
+ int teacher[];
+ teacher=new int [5];
+ int i=0;
+ byte flag='1';
+ int teacherid;
+ dbconnection d = new dbconnection();
+  Connection t = d.getConnection();
+	Statement stmt;
+	stmt=null;
+	try {
+		stmt = t.createStatement();
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+    String sql1="select * from  teachertime ;";
+	ResultSet rs=null;
+	rs=stmt.executeQuery(sql1);
+	while(rs.next())
+	{
+	    if(i==5)
+	    break;
+	    teacherid=Integer.valueOf(rs.getString(3));
+	    if(Integer.valueOf(rs.getString(4))>Integer.valueOf(rs.getString(5))) {
+	    for(int j=0;j<=i;j++)
+	    {
+	    flag='1';
+	    if(teacherid==teacher[j])
+	    {
+	    flag='0';
+	    break;	    
+	    }
+	    }
+	    if(flag=='1')
+	    {teacher[i++]=teacherid;
+	    }
+	    }
+	}
+    
+    for(int j=0;j<i;j++)
+    {
+    teacherid=teacher[j];
+    String sql="select * from  teacher  where teacherid=\""+teacherid+"\";";
+    ResultSet rs1=null;
+	rs1=stmt.executeQuery(sql);
+
+	while(rs1.next())
+	{
+	%>
+	<a href="search?name=<%=rs1.getString(4)%>"><%=rs1.getString(4) %></a> 
+	<% 
+	  
+	}
+	}
+%>
+<hr>
+</span>
+</div>
+
 <STYLE TYPE="text/css">
 <!-- 
 BODY {background-image: URL(image/snow.jpg); 
@@ -48,9 +114,11 @@ background-attachment: fixed;}
 
 
 
- <form method="POST" action="search" class="well form-search">
+
  <hr>
+ 
 <div style="margin:0 auto;width:700px;">
+
 <span class="glyphicon glyphicon-search" style="color: rgb(216, 104, 141); font-size: 35px;"> 输入您想要预约的教师的名字:
 <br><br>
 
@@ -58,9 +126,10 @@ background-attachment: fixed;}
 	 <button type="submit" class="btn btn-primary btn-lg" style="width: 264px; height: 50px ">查找</button>
 	 <footer>
         <p>&copy; hopesala 2014</p>
-      </footer>  
+      </footer> 
+      
 	 </div> 
-	 
+	
 
  
 </span>

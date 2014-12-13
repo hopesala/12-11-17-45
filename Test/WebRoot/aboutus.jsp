@@ -1,24 +1,30 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
 <!DOCTYPE html>
 <html>
   <head>
-    <title>aboutus.html</title>
+    <title>aboutus</title>
 	
     <meta name="keywords" content="keyword1,keyword2,keyword3">
     <meta name="description" content="this is my page">
     <meta name="content-type" content="text/html; charset=gb2312">
     
     <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
-<!-- ĞÂ Bootstrap ºËĞÄ CSS ÎÄ¼ş -->
+<!-- æ–° Bootstrap æ ¸å¿ƒ CSS æ–‡ä»¶ -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 
-<!-- ¿ÉÑ¡µÄBootstrapÖ÷ÌâÎÄ¼ş£¨Ò»°ã²»Ê¹ÓÃ£© -->
+<!-- å¯é€‰çš„Bootstrapä¸»é¢˜æ–‡ä»¶ï¼ˆä¸€èˆ¬ä¸ä½¿ç”¨ï¼‰ -->
 <script src="css/bootstrap-theme.min.css"></script>
 
-<!-- jQueryÎÄ¼ş¡£Îñ±ØÔÚbootstrap.min.js Ö®Ç°ÒıÈë -->
+<!-- jQueryæ–‡ä»¶ã€‚åŠ¡å¿…åœ¨bootstrap.min.js ä¹‹å‰å¼•å…¥ -->
 <script src="js/jquery.js"></script>
 
-<!-- ×îĞÂµÄ Bootstrap ºËĞÄ JavaScript ÎÄ¼ş -->
+<!-- æœ€æ–°çš„ Bootstrap æ ¸å¿ƒ JavaScript æ–‡ä»¶ -->
 <script src="js/bootstrap.min.js"></script>
 <!--
 
@@ -36,13 +42,13 @@ background-attachment: fixed;}
 --> 
 </STYLE>
     This is my HTML page. <br>
-    <p><font size=30 color=red bgcolor=black>Special Thanks to ¹ùºé½Ü¡¢ÁÖŞÄ³É¡¢²Ü³Ç»ª</font></p>
-    <a href="http://www.github.com/hopesala" target="_blank"><font size=50>GithubÖ÷Ò³</font></a>
+    <p><font size=30 color=red bgcolor=black>Special Thanks to éƒ­æ´ªæ°ã€æ—å¼ˆæˆã€æ›¹åŸå</font></p>
+    <a href="http://www.github.com/hopesala" target="_blank"><font size=50>Githubä¸»é¡µ</font></a>
     <a url="http://www.github.com/hopesala"><font size=200px>http://www.github.com/hopesala</font></a>
     <div class="dropdown">
    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" 
       data-toggle="dropdown">
-      Ö÷Ìâ
+      ä¸»é¢˜
       <span class="caret"></span>
    </button>
    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
@@ -50,18 +56,19 @@ background-attachment: fixed;}
          <a role="menuitem" tabindex="-1" href="#">Java</a>
       </li>
       <li role="presentation">
-         <a role="menuitem" tabindex="-1" href="#">Êı¾İÍÚ¾ò</a>
+         <a role="menuitem" tabindex="-1" href="#">æ•°æ®æŒ–æ˜</a>
       </li>
       <li role="presentation">
          <a role="menuitem" tabindex="-1" href="#">
-            Êı¾İÍ¨ĞÅ/ÍøÂç
+            æ•°æ®é€šä¿¡/ç½‘ç»œ
          </a>
       </li>
       <li role="presentation" class="divider"></li>
       <li role="presentation">
-         <a role="menuitem" tabindex="-1" href="#">·ÖÀëµÄÁ´½Ó</a>
+         <a role="menuitem" tabindex="-1" href="#">åˆ†ç¦»çš„é“¾æ¥</a>
       </li>
    </ul>
 </div>
   </body>
 </html>
+

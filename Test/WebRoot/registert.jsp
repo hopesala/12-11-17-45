@@ -37,6 +37,7 @@ theme.min.css"></script>
   </head>
   
   <body>
+    <jsp:include  page="MyJsp.jsp"/>
   <STYLE TYPE="text/css">
 <!-- 
 BODY {background-image: URL(image/book.jpg); 
