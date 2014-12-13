@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=GB2312"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -26,20 +26,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <form method="POST" action="Book1">
   <%
   request.setCharacterEncoding("UTF-8");
-  String tti=request.getParameter("teachertimeid"); 
+  String tti=request.getParameter("tti"); 
   session.setAttribute("tti",request.getParameter("tti"));
   String name=request.getParameter("name"); 
   String time=request.getParameter("time");
   String week=request.getParameter("week");
  %>
- tti:<%=tti %>
 
-  <p>ฟษาิษ่ถจิคิผสยผþ<p>
-  ฝฬสฆร๛ืึฃบ<%=name %>
- <p>ิคิผสยผþ:<input type="text" name="thing"><br><p>
+  <p>ๅฏไปฅ่ฎพๅฎ้ข็บฆไบไปถ<p>
+  ๆ•ๅธๅๅญ—๏ผ<%=name %>
+ <p>้ข็บฆไบไปถ:<input type="text" name="thing"><br><p>
  
-    <input type="submit" value="ิคิผ">
+    <input type="submit" value="้ข็บฆ">
     </form>
-    <input type="button" value="ทตปุ" onclick="window.location.href='success.jsp'"  style="background:White;width:400px;height:40px;font-size:20px;">
+    <input type="button" value="่ฟ”ๅ" onclick="window.location.href='success.jsp'"  style="background:White;width:400px;height:40px;font-size:20px;">
   </body>
 </html>

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -6,20 +6,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <%@ page import ="com.ht.servlet.*"%>
 <%@ page import="java.sql.*"%>
 <!-- 新 Bootstrap 核心 CSS 文件 -->
-<link href="http://apps.bdimg.com/libs/bootstrap/3.0.3/css/bootstrap.min.css" 
+<link href="css/bootstrap.min.css" rel="stylesheet">
 
-rel="stylesheet">
 
 <!-- 可选的Bootstrap主题文件（一般不使用） -->
-<script src="http://apps.bdimg.com/libs/bootstrap/3.0.3/css/bootstrap-
-
-theme.min.css"></script>
+<script src="css/bootstrap-theme.min.css"></script>
 
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="js/jquery.js"></script>
 
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="http://apps.bdimg.com/libs/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--
+
+//-->
+</script>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -39,20 +40,21 @@ theme.min.css"></script>
   </head>
   
   <body>
+  
   <STYLE TYPE="text/css">
 <!-- 
-BODY {background-image: URL(image/snowgirl.jpg); 
+BODY {background-image: URL(image/spring.jpg); 
 background-position: center; 
 background-repeat: no-repeat; 
 background-attachment: fixed;} 
 --> 
 </STYLE>
-  <div style="margin:0 auto;width:700px;">
-  <p><font color=yellow size=50 ><strong>我的空档</strong></font><p>
-  <br>
+<hr>
+  <div style="margin:0 auto;width:600px;">
+  
+  <p>我的空挡<p>
   <table class="table" >
-  <thead>
-  <tr class="success">
+  <tr>
   <th>日期</th>
   <th>时间</th>
   <th>事件</th>
@@ -61,7 +63,6 @@ background-attachment: fixed;}
   <th>取消预约</th>
   <th>查看预约</v>
   </tr>
-  </thead>
     <%
      dbconnection d = new dbconnection();
      Connection t = d.getConnection();
@@ -84,7 +85,7 @@ background-attachment: fixed;}
 		while(rs.next())
 		{
 		%>
-		<tr class="warning">
+		<tr>
 		<td><%=rs.getString(8)+rs.getString(9)+rs.getString(2)%></td>
 		<td><%=rs.getString(6)%></td>
 		
@@ -108,11 +109,12 @@ background-attachment: fixed;}
 		E.printStackTrace();	
 	     }
 	     %>
-	     </table><br>
-	     </div>
-	     <div style="margin:10 auto;width: 297px;">
-	     <input type="button" value="返回" class="btn btn-log btn-primary" onclick="window.location.href='successt.jsp'" style="width: 256px; ">
-	     </div>
-	     	
+	     </table>
+	     <div style="margin:0 auto;width:200px;">
+	      <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='successt.jsp'" style="width: 216px; ">
+      返回
+   </button>
+   </div>
+  	</div>
   </body>
 </html>

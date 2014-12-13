@@ -32,6 +32,9 @@ public class Search extends HttpServlet {
    throws ServletException, IOException {
    HttpSession session = req.getSession();
    String name = req.getParameter("name");
+   byte b[]=name.getBytes("ISO-8859-1");
+   name=new String(b,"UTF-8");
+   System.out.print("name1="+name);
    String teacherid=null;
 	dbconnection d = new dbconnection();	
 	Connection t = d.getConnection();

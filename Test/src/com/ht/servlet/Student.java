@@ -7,7 +7,19 @@ import java.sql.Statement;
 
 
 public class Student {
-	private String username,name;
+	private String username,name,phone,email;
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	private String password,studentid;
 	private boolean isLogin,isexi;
 	public boolean isIsexi() {
@@ -122,7 +134,7 @@ public class Student {
 			setStudentid(String.valueOf(rs.getInt(1)+1));
 			}
 			System.out.println("studenid:"+studentid);
-			sql="insert into student values(\""+username+"\", \""+password+"\",\""+name+"\", \""+studentid+"\")";
+			sql="insert into student values(\""+username+"\", \""+password+"\",\""+name+"\", \""+studentid+"\",\""+phone+"\",\""+email+"\")";
 			stmt.executeUpdate(sql);
 			
 			

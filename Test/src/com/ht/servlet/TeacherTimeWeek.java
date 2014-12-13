@@ -2,7 +2,8 @@ package com.ht.servlet;
 
 public class TeacherTimeWeek {
    
-    private int num;private String [] time;	private int teachertimeid[];
+    private int num;private String [] time;	
+    private int teachertimeid[];
     public void setNum(int num) {
 		this.num = num;
 	}

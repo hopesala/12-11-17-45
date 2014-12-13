@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -24,6 +24,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     没找到该教师<br>
+    <script type="text/javascript" >alert("没找到该教师,请重新输入老师姓名！")</script>
       <jsp:include  page="Search.jsp"/>
   </body>
 </html>

@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -47,7 +47,7 @@ background-repeat: no-repeat;
 background-attachment: fixed;} 
 --> 
 </STYLE>
-  <div style="margin:0 auto;width:700px;">
+   <div style="margin:0 auto;width:700px;">
   <table class="table"><br>
   <caption><font color="red" size="50">查询结果</font></caption>
   <thead>

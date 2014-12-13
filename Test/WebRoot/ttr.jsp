@@ -88,7 +88,7 @@ int Num=Integer.valueOf((String)session.getAttribute("j"));
  		<th>具体时间</th>
 	 	<th>可预约总人数</th>
 	 	<th>已经预约人数</th>
-	 	<th>预约时间</th>
+	 	<th>预约事件</th>
 	 	<th>预约</th>
       </tr>
    </thead>
@@ -100,7 +100,7 @@ int Num=Integer.valueOf((String)session.getAttribute("j"));
  	{%>
  	<tr class="success">
  	<td><%=time %></td>
- 	<td><%=tt[i].getName() %></td>
+ 	<td><%=tt[i].getTeachertimeid() %></td>
     <td><%=tt[i].getStime() %></td>
     
       <td><%=tt[i].getTime() %></td>
@@ -114,7 +114,7 @@ int Num=Integer.valueOf((String)session.getAttribute("j"));
        %>
           <td><%=tt[i].getThingsec() %></td>
           <%if(Integer.valueOf(tt[i].getTime())>Integer.valueOf(tt[i].getTimeed())) { %>
-          <td><a href="book2.jsp?name=<%=tt[i].getTeachertimeid()%>"> 可预约</a> </td> 
+          <td><a href="book2.jsp?tti=<%=tt[i].getTeachertimeid()%>"> 可预约</a> </td> 
           <% } else {%>
           <td>不可预约</td>
           <%}
@@ -124,7 +124,7 @@ int Num=Integer.valueOf((String)session.getAttribute("j"));
           %>
           <td><%=tt[i].getThing() %></td>
           <%if(Integer.valueOf(tt[i].getTime())>Integer.valueOf(tt[i].getTimeed())) { %>
-          <td><a href="book2.jsp?name=<%=tt[i].getTeachertimeid()%>"> 可预约</a> </td> 
+          <td><a href="book2.jsp?tti=<%=tt[i].getTeachertimeid()%>"> 可预约</a> </td> 
           <% } else {%>
           <td>不可预约</td>
           <%

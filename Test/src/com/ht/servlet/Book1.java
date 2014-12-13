@@ -29,7 +29,7 @@ public class Book1 extends HttpServlet {
    throws ServletException, IOException {
   String thing = req.getParameter("thing");
   byte b[]=thing.getBytes("ISO-8859-1");
-  thing=new String(b);
+  thing=new String(b,"UTF-8");
   System.out.println("thing="+thing);
   Student st=(Student)req.getSession().getAttribute("account");
   String tti=(String)req.getSession().getAttribute("tti");

@@ -1,24 +1,10 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<!-- 新 Bootstrap 核心 CSS 文件 -->
-<link href="http://apps.bdimg.com/libs/bootstrap/3.0.3/css/bootstrap.min.css" 
-
-rel="stylesheet">
-
-<!-- 可选的Bootstrap主题文件（一般不使用） -->
-<script src="http://apps.bdimg.com/libs/bootstrap/3.0.3/css/bootstrap-
-
-theme.min.css"></script>
-
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
-
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="http://apps.bdimg.com/libs/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <%@ page import ="com.ht.servlet.*"%>
+<%@ page import="java.sql.*"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -37,16 +23,38 @@ theme.min.css"></script>
 
   </head>
   
-<form method="POST" action="Book2">
+<form  method="POST" action="Book2">
   <%
-  request.setCharacterEncoding("UTF-8");
-  String tti=request.getParameter("name"); 
-  session.setAttribute("tti",tti);
-  %>
-  <hr>
-	<div style="margin:0 auto;width: 326px;">
-  <button type="submit" class="btn btn-success" style="width: 370px; height: 53px">确认预约</button>
-  </div>
-  <hr>
+  String tti=request.getParameter("tti"); 
+  System.out.println("tti"+tti);
+  Student st=(Student)session.getAttribute("account");  
+  System.out.println("studentid="+st.getStudentid());
+  dbconnection d = new dbconnection();
+  Connection t = d.getConnection();
+	Statement stmt;
+	stmt=null;
+
+	stmt = t.createStatement();
+	String sql1="select * from  studenttime  where teachertimeid=\""+tti+"\"and  studentid=\""+st.getStudentid()+"\";";
+	ResultSet rs=null;
+	rs=stmt.executeQuery(sql1);
+	if(rs.next())
+	{
+	    System.out.println("error");
+
+	   response.sendRedirect("Mybookfa.jsp");
+	}
+	else
+	{
+	String sql="update  teachertime set timeed=timeed+1 where teachertimeid=\""+tti+"\";";
+	stmt.executeUpdate(sql);
+	sql="insert into studenttime values(\""+st.getStudentid()+"\", \""+tti+"\")";
+	stmt.executeUpdate(sql);
+	t.close();
+	 response.sendRedirect("Mybook.jsp");
+	 }
+	 	    %>
+	   
+	
    </form>
 </html>

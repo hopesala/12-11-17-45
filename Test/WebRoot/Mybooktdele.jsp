@@ -1,25 +1,11 @@
-<%@ page contentType="text/html;charset=utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <%@ page import ="com.ht.servlet.*"%>
 <%@ page import="java.sql.*"%>
-<!-- 新 Bootstrap 核心 CSS 文件 -->
-<link href="http://apps.bdimg.com/libs/bootstrap/3.0.3/css/bootstrap.min.css" 
 
-rel="stylesheet">
-
-<!-- 可选的Bootstrap主题文件（一般不使用） -->
-<script src="http://apps.bdimg.com/libs/bootstrap/3.0.3/css/bootstrap-
-
-theme.min.css"></script>
-
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
-
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="http://apps.bdimg.com/libs/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -38,14 +24,6 @@ theme.min.css"></script>
 
   </head>
     <body>
-      <STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/spring.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
      <%
      dbconnection d = new dbconnection();
      Connection t = d.getConnection();
@@ -71,9 +49,7 @@ background-attachment: fixed;}
 	     }
 	%>
 
-    <script>
-    alert("删除空档成功！")
-    </script>
+    删除成功 <br>
     <jsp:include  page="Mybookt.jsp"/>
   </body>
 </html>

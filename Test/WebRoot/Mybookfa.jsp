@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>预约结果查询</title>
+    <title>My JSP 'Mybookfa.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -25,8 +25,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  <div style="margin:0 auto;width:700px;"><span class="glyphicon glyphicon-th-list" style="color: rgb(255, 0, 255); font-size: 34px;">您的预约如下：</span> <br></div>
-   
+    已经预约. <br>
+    <script>alert("您已经预约成功，请不要重复预约！")</script>
     <jsp:include  page="Mybook.jsp"/>
   </body>
 </html>

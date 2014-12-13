@@ -28,9 +28,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   String username = request.getParameter("username");
   String pwd = request.getParameter("pwd");
   String name = request.getParameter("name");
+    String email = request.getParameter("email");
+  String phone = request.getParameter("phone");
+  byte b[]=name.getBytes("ISO-8859-1");
+  
+  name=new String(b,"UTF-8");
   teacher.setName(name);
   teacher.setPassword(pwd);
   teacher.setUsername(username);
+  teacher.setEmail(email);
+  teacher.setPhone(username);
   teacher.setupcheck();
   if(teacher.isIsexi()==false)
    {

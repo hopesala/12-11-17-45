@@ -46,16 +46,60 @@ background-attachment: fixed;}
 --> 
 </STYLE>
   <div style="margin:0 auto;width:300px;">
-    <form action="registertpage.jsp" style="width: 669px; ">
+<form action="registertpage.jsp"   onsubmit="return check()" name="form1" style="width: 600px; ">
     <br>
          <span class="glyphicon glyphicon-log-in" style="color: rgb(55, 160, 189); font-size: 30px;">用户名:<input type="text" name="username"></span><br><br>
-         <span class="glyphicon glyphicon-lock" style="color: rgb(55, 160, 189); font-size: 30px;">密  码:<input type="password" name="pwd"></span><br><br>
-         <span class="glyphicon glyphicon-user" style="color: rgb(55, 160, 189); font-size: 30px;">姓 名:<input type="text" name="name"></span><br>
+         <span class="glyphicon glyphicon-lock" style="color: rgb(55, 160, 189); font-size: 30px;">密  码:<input type="password" name="pwd" ></span><br><br>
+         <span class="glyphicon glyphicon-lock" style="color: rgb(55, 160, 189); font-size: 30px;">确认密码:<input type="password" name="pwd1" style="width: 300px; "></span><br><br>
+         <span class="glyphicon glyphicon-user" style="color: rgb(55, 160, 189); font-size: 30px;">真实姓名:<input type="text" name="name" style="width: 300px; "></span><br>
+         <br><span class="glyphicon glyphicon-lock" style="color: rgb(55, 160, 189); font-size: 30px;">手 机:<input type="text" name="phone"></span><br><br>
+         <span class="glyphicon glyphicon-lock" style="color: rgb(55, 160, 189); font-size: 30px;">邮 箱:<input type="text" name="email"></span><br><br>
             <br>
              <input type="submit" class="btn btn-success" value="注册" style="width: 458px; ">
 
     </form>
     </div>
+     <script LANGUAGE="javascript">
+function check(){ 
+var name = document.form1.username; 
+var password= document.form1.pwd; 
+var password1= document.form1.pwd1; 
+var truename= document.form1.name;
+
+
+if(name.value.length==0){ 
+alert("请输入用户名"); 
+name.focus(); 
+return false; 
+}
+else if(password.value.length==0) {
+alert("密码不能为空"); 
+password.select(); 
+return false;
+}
+else if(password.value.length==0) {
+alert("密码不能为空"); 
+password.select(); 
+return false;
+}
+else if(password.value.length<6||password.value.length>16) {
+alert("密码长度必须在6到16个字符之间"); 
+password.select(); 
+return false;
+}
+else if(password.value!=password1.value) {
+alert("确认密码与密码输入不一致"); 
+password1.select(); 
+return false;
+}
+else if(truename.value.length==0) {
+alert("真实姓名不能为空"); 
+truename.select(); 
+return false;
+}
+}
+ //--></script>  
+  
     
   </body>
 </html>
