@@ -13,10 +13,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+     <STYLE TYPE="text/css">
+<!-- 
+BODY {background-image: URL(image/book.jpg); 
+background-position: center; 
+background-repeat: no-repeat; 
+background-attachment: fixed;} 
+--> 
+</STYLE>
 
 </head>
-<body>
 
+<body>
 <nav class="navbar navbar-default" role="navigation">
    <div class="navbar-header">
       <a class="navbar-brand" href="#">校园预约</a>
@@ -31,12 +39,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </a>
             <ul class="dropdown-menu">
                <li><a href="Login.jsp">登录</a></li>
+                   <li class="divider"></li>
                <li><a href="Mybook.jsp">我的预约</a></li>
+                   <li class="divider"></li>
                <li><a href="Search.jsp">查询预约</a></li>
-               <li class="divider"></li>
-               <li><a href="#">分离的链接</a></li>
-               <li class="divider"></li>
-               <li><a href="#">另一个分离的链接</a></li>
+            
+           
+              
             </ul>
          </li>
          <li class="dropdown">
@@ -97,6 +106,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       </ul>
    </div>
 </nav>
+  
 
 </body>
 </html>			

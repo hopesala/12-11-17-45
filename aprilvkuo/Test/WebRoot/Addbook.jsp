@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>添加预约</title>
+    <title>教师添加预约</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -23,32 +23,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	-->
   </head>
   <link href="css/bootstrap.min.css" rel="stylesheet">
-
 <script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
-<!-- 可选的Bootstrap主题文件（一般不使用） -->
 <script src="css/bootstrap-theme.min.css"></script>
-
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="js/jquery.js"></script>
-
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="js/bootstrap.min.js"></script>
-<!--
 
-//-->
 
   <body>
     <jsp:include  page="MyJsp.jsp"/>
 
   
-<STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/spring.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
+
 <hr><br>
 <%  Teacher te=(Teacher)request.getSession().getAttribute("teacher");
   if(te==null)
@@ -72,8 +57,6 @@ background-attachment: fixed;}
    <br> <span class="glyphicon glyphicon-stop" style="color: rgb(255, 140, 60); font-size: 35px;">结束时间:<input id="d5222" name="etime" class="Wdate" type="text" onFocus="WdatePicker({dateFmt:'H:mm',minDate:'#F{$dp.$D(\'d5221\')}'})" style="width: 147px; height: 46px"/></span>
       <br>    <br> <span class="glyphicon glyphicon-info-sign" style="color: rgb(255, 140, 60); font-size: 35px;">事件[选填]:<input type="text" name="thing" style="width: 253px; "></span><br>
 
-    
-    </span>
     <div style="margin:0 auto;width:200px;"><br>
    <button type="submit" class="btn btn-primary btn-lg" onclick="window.location.href='Mybookt.jsp'" style="width: 216px; ">
       提交

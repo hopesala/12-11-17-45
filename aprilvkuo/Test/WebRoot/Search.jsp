@@ -47,6 +47,24 @@ background-attachment: fixed;}
 	 else
 	 {
 	 %>
+	 
+	 <div style="margin:0 auto;width:700px;">
+
+<span class="glyphicon glyphicon-search" style="color: rgb(216, 104, 141); font-size: 35px;"> 输入您想要预约的教师的名字:
+<br><br>
+
+	<input type="text" name="name" style="width: 265px; height: 42px">	  
+	 <button type="submit" class="btn btn-primary btn-lg" style="width: 264px; height: 50px ">查找</button>
+	 <footer>
+        <p>&copy; hopesala 2014</p>
+      </footer> 
+      
+	  
+	
+
+ 
+</span>
+</div>
  <form method="POST" action="search" class="well form-search">
 <div style="margin:0 auto;width:600px;">
 <span class="glyphicon glyphicon-user" style="color: rgb(216, 104, 141); font-size: 25px;">
@@ -121,22 +139,7 @@ background-attachment: fixed;}
 
  <hr>
  
-<div style="margin:0 auto;width:700px;">
 
-<span class="glyphicon glyphicon-search" style="color: rgb(216, 104, 141); font-size: 35px;"> 输入您想要预约的教师的名字:
-<br><br>
-
-	<input type="text" name="name" style="width: 265px; height: 42px">	  
-	 <button type="submit" class="btn btn-primary btn-lg" style="width: 264px; height: 50px ">查找</button>
-	 <footer>
-        <p>&copy; hopesala 2014</p>
-      </footer> 
-      
-	 </div> 
-	
-
- 
-</span>
 <%} %>
 
 

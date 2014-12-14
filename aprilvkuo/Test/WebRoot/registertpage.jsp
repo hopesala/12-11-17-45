@@ -43,7 +43,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    {
     System.out.println("success");
    %>
-   <jsp:forward page="Logint.jsp" />
+   <jsp:forward page="successt.jsp" />
    <% 
    }
   %>

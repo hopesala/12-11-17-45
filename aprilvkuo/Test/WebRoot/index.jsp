@@ -23,37 +23,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-<meta charset='UTF-8'>
-	<meta name="robots" content="noindex">
-	<link rel="stylesheet" href="http://www.yyyweb.com/demo/common/init.css">
-	<style>
-		body {
-			background: #111;
-		}
-		canvas {
-			background: #111;
-			border: 1px solid #171717;
-			display: block;
-			left: 50%;
-			margin: -51px 0 0 -201px;
-			position: absolute;
-			top: 50%;
-		}
-	</style>
-  </head>
+<style>
+<!--
+body{
+margin:0px;
+padding:10px;
+filter:progid:DXImageTransform.microsoft.gradient(gradienttype=0,startColorStr=blue,endColorStr=white);
+}
+-->
+</style>
+
+</head>
   
   <body>
   <jsp:include  page="MyJsp.jsp"/>
-  
-  <STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/book.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
-
 
    <div style="margin:0 auto;width:200px;">
 	
@@ -151,7 +134,7 @@ var lightLoader = function(c, cw, ch){
 	};
 	this.particles = [];
 	this.particleLift = 180;
-	this.hueStart = 0
+	this.hueStart = 0;
 	this.hueEnd = 120;
 	this.hue = 0;
 	this.gravity = .15;

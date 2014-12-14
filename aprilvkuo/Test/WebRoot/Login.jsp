@@ -14,14 +14,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
 <body>
   <jsp:include  page="MyJsp.jsp"/>
-    <STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/book.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
+
   <%
     Teacher te=(Teacher)request.getSession().getAttribute("teacher");
     Student st=(Student)request.getSession().getAttribute("account");
@@ -32,6 +25,7 @@ background-attachment: fixed;}
 <div id="myAlert" class="alert alert-warning">
    <a href="#" class="close" data-dismiss="alert">&times;</a>
    <strong>警告！</strong>教师端已经登陆。
+   <%response.setHeader("refresh","2;url=success.jsp");//定时跳转 %>
 </div>
 <% 
 	 }
