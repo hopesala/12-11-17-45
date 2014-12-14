@@ -3,22 +3,9 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<!-- 新 Bootstrap 核心 CSS 文件 -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<%@ page import ="com.ht.servlet.*"%>
+<%@ page import="java.sql.*"%>
 
-
-<!-- 可选的Bootstrap主题文件（一般不使用） -->
-<script src="css/bootstrap-theme.min.css"></script>
-
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="js/jquery.js"></script>
-
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="js/bootstrap.min.js"></script>
-<!--
-
-//-->
-</script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +13,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-   
+
 </head>
 <body>
 
@@ -37,7 +24,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    <div>
       <ul class="nav navbar-nav">
          <li class="active"><a href="index.jsp">主页</a></li>
-         
          <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                学生端 
@@ -79,6 +65,34 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                
             </ul>
          </li>
+         <%
+         Teacher te=(Teacher)request.getSession().getAttribute("teacher");
+         Student st=(Student)request.getSession().getAttribute("account");
+         String status=null;
+         if(te==null && st== null)
+	     {
+	      status="未登录";
+	       %>
+         <li><a><%=status %></a></li>
+         <%
+	      }
+	      else if(te!=null)
+	      {
+	      status="教师端:"+te.getName();
+	       %>
+         <li><a href="successt.jsp"><%=status %></a></li>
+         <%
+	      }
+	      else if(st!=null)
+	      {
+	      status="学生端:"+st.getName();
+	       %>
+         <li><a href="success.jsp"><%=status %></a></li>
+         <%
+	      }
+          %>
+           <li><a href="logout.jsp">注销</a></li>
+         
       </ul>
    </div>
 </nav>

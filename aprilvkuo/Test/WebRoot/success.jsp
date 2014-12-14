@@ -33,7 +33,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
 <body>
-
+<jsp:include  page="MyJsp.jsp"/>
 <STYLE TYPE="text/css">
 <!-- 
 BODY {background-image: URL(image/snow.jpg); 

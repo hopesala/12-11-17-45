@@ -36,7 +36,7 @@ background-attachment: fixed;}
      <%Teacher te=(Teacher)session.getAttribute("teacher");%>
 
      <div style="margin:0 auto;width:600px;">
-  <span class="glyphicon glyphicon-hand-right" style="color: rgb(55, 160, 189); font-size: 50px;"> 欢迎您【<%=te.getName() %>】</span>
+  <span class="glyphicon glyphicon-hand-right" style="color: rgb(55, 160, 189); font-size: 50px;"> 欢迎您【<%=te.getName() %>】老师</span>
    </div>
      <hr>
    <br>
