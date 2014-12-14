@@ -28,13 +28,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   request.setCharacterEncoding("UTF-8");
   String tti=request.getParameter("tti"); 
   session.setAttribute("tti",request.getParameter("tti"));
-  String name=request.getParameter("name"); 
+  String name = new String(request.getParameter("name").getBytes("ISO8859-1"), "GBK");
+
+  out.print(name);
+
+  
   String time=request.getParameter("time");
   String week=request.getParameter("week");
  %>
 
   <p>可以设定预约事件<p>
-  教师名字：<%=name %>
+    <p>预约时间：<%=time %><p>
+      <p>教师名字：<%=name %><p>
  <p>预约事件:<input type="text" name="thing"><br><p>
  
     <input type="submit" value="预约">

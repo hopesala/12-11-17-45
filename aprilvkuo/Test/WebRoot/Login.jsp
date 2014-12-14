@@ -3,7 +3,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
+<%@ page import ="com.ht.servlet.*"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
@@ -14,7 +14,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
 <body>
   <jsp:include  page="MyJsp.jsp"/>
-  <STYLE TYPE="text/css">
+    <STYLE TYPE="text/css">
 <!-- 
 BODY {background-image: URL(image/book.jpg); 
 background-position: center; 
@@ -22,6 +22,35 @@ background-repeat: no-repeat;
 background-attachment: fixed;} 
 --> 
 </STYLE>
+  <%
+    Teacher te=(Teacher)request.getSession().getAttribute("teacher");
+    Student st=(Student)request.getSession().getAttribute("account");
+     if(te!=null)
+	 {
+	 %>
+
+<div id="myAlert" class="alert alert-warning">
+   <a href="#" class="close" data-dismiss="alert">&times;</a>
+   <strong>警告！</strong>教师端已经登陆。
+</div>
+<% 
+	 }
+	 else if(st!=null)
+	 {
+	 	 %>
+
+<div id="myAlert" class="alert alert-warning">
+   <a href="#" class="close" data-dismiss="alert">&times;</a>
+   <strong>警告！</strong>学生端已经登陆。
+</div>
+<%
+}
+else
+{
+
+ %>
+ 
+
 <hr>
 <div style="margin:0 auto;width:200px;">
 <span class="glyphicon glyphicon-user" style="color: rgb(55, 160, 189); font-size: 35px;">学生登录</span>
@@ -49,7 +78,7 @@ background-attachment: fixed;}
 
 <br>
     
-    
+  <%} %>  
    </form>
     <script LANGUAGE="javascript">
 function check(){ 

@@ -38,7 +38,10 @@ background-attachment: fixed;}
   if(st==null)
 	 {
 	 %>
-	  <p> 学生端未登录<p>
+	<div id="myAlert" class="alert alert-warning">
+   <a href="#" class="close" data-dismiss="alert">&times;</a>
+   <strong>警告！</strong>学生端未登录
+   </div>
 	 <input type=button value=后退 onclick="window.history.go(-1)">
 	 <%
 	 }

@@ -25,8 +25,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <jsp:include  page="MyJsp.jsp"/>
     <%
-         Teacher te=(Teacher)request.getSession().getAttribute("teacher");
-         Student st=(Student)request.getSession().getAttribute("account");
          response.setHeader("refresh","2;url=index.jsp");//定时跳转
          session.invalidate();//注销
 	 %> 

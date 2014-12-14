@@ -31,7 +31,6 @@ public class Search extends HttpServlet {
  public void doGet(HttpServletRequest req, HttpServletResponse resp)
    throws ServletException, IOException {
    HttpSession session = req.getSession();
-  
    String name = req.getParameter("name");
    byte b[]=name.getBytes("ISO-8859-1");
    name=new String(b,"UTF-8");

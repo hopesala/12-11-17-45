@@ -27,6 +27,7 @@ public class Book1 extends HttpServlet {
  @Override
  public void doGet(HttpServletRequest req, HttpServletResponse resp)
    throws ServletException, IOException {
+	 req.setCharacterEncoding("UTF-8");
   String thing = req.getParameter("thing");
   byte b[]=thing.getBytes("ISO-8859-1");
   thing=new String(b,"UTF-8");

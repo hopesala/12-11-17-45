@@ -11,6 +11,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
 
 <title>教师登陆</title>
+
+
+ <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <script src="/scripts/jquery.min.js"></script>
+   <script src="/bootstrap/js/bootstrap.min.js"></script>
   </head>
   
 <body>
@@ -23,6 +28,38 @@ background-repeat: no-repeat;
 background-attachment: fixed;} 
 --> 
 </STYLE>
+
+<%
+    Teacher te=(Teacher)request.getSession().getAttribute("teacher");
+    Student st=(Student)request.getSession().getAttribute("account");
+     if(te!=null)
+	 {
+	 %>
+
+<div id="myAlert" class="alert alert-warning">
+   <a href="#" class="close" data-dismiss="alert">&times;</a>
+   <strong>警告！</strong>教师端已经登陆。
+</div>
+<% 
+	 }
+	 else if(st!=null)
+	 {
+	 	 %>
+
+<div id="myAlert" class="alert alert-warning">
+   <a href="#" class="close" data-dismiss="alert">&times;</a>
+   <strong>警告！</strong>学生端已经登陆。
+</div>
+<% 
+}
+else
+{
+
+ %>
+ 
+
+ 
+ 
 <div style="margin:0 auto;width:200px;">
 <span class="glyphicon glyphicon-user" style="color: rgb(55, 160, 189); font-size: 35px;">教师登录</span>
 </div>   
@@ -50,6 +87,8 @@ background-attachment: fixed;}
 <br>
     
    </form>
+   
+  <% }%>
     <script LANGUAGE="javascript">
 function check(){ 
 var name = document.form1.username; 
@@ -65,6 +104,16 @@ password.focus();
 return false;
 }
 }
- //--></script>   
+ //--></script>  
+ 
+ 
+   <script type="text/javascript">
+$(function(){
+   $("#myAlert").bind('closed.bs.alert', function () {
+      alert("警告消息框被关闭。");
+   });
+});
+</script>  
+
   </body>
 </html>  
