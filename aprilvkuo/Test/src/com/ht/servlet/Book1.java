@@ -52,6 +52,7 @@ public class Book1 extends HttpServlet {
 	stmt.executeUpdate(sql);
 	t.close();
 	 resp.sendRedirect("Mybook.jsp");
+	 
 	}catch (Exception E) {
 	E.printStackTrace();	
 }

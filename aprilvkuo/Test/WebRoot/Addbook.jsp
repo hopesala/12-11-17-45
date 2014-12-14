@@ -39,24 +39,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-<script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+    <jsp:include  page="MyJsp.jsp"/>
 
-<!-- 新 Bootstrap 核心 CSS 文件 -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-
-
-<!-- 可选的Bootstrap主题文件（一般不使用） -->
-<script src="css/bootstrap-theme.min.css"></script>
-
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="js/jquery.js"></script>
-
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="js/bootstrap.min.js"></script>
-<!--
-
-//-->
-</script>
   
 <STYLE TYPE="text/css">
 <!-- 
@@ -67,6 +51,17 @@ background-attachment: fixed;}
 --> 
 </STYLE>
 <hr><br>
+<%  Teacher te=(Teacher)request.getSession().getAttribute("teacher");
+  if(te==null)
+	 {
+	 %>
+	  <p> 教师端未登录<p>
+	 <input type=button value=后退 onclick="window.history.go(-1)">
+	 <%
+	 }
+	 else
+	 {
+	 %>
 <div style="margin:0 auto;width:600px;">
  <form action="MybooktAdd.jsp">
  <span class="glyphicon glyphicon-calendar" style="color: rgb(255, 140, 60); font-size: 35px;">日  期:<input type="text" id="d245" name="time" onfocus="WdatePicker({skin:'whyGreen',minDate:'%y-%M-{%d}'})" class="Wdate" style="width: 306px; height: 52px"/>
@@ -97,5 +92,6 @@ background-attachment: fixed;}
     <div class="clearfix"  style="background: #88D8D8;border: 0px solid #000;padding: 20px;"></div>
     <div class="clearfix"  style="background: #78D8D8;border: 0px solid #000;padding: 20px;"></div>
     <div class="clearfix"  style="background: #68D8D8;border: 0px solid #000;padding: 20px;"></div>
+    <%} %>
   </body>
 </html>

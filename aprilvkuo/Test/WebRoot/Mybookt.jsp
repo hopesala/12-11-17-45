@@ -5,22 +5,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 <%@ page import ="com.ht.servlet.*"%>
 <%@ page import="java.sql.*"%>
-<!-- 新 Bootstrap 核心 CSS 文件 -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
 
-
-<!-- 可选的Bootstrap主题文件（一般不使用） -->
-<script src="css/bootstrap-theme.min.css"></script>
-
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="js/jquery.js"></script>
-
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="js/bootstrap.min.js"></script>
-<!--
-
-//-->
-</script>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -40,6 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+    <jsp:include  page="MyJsp.jsp"/>
   
   <STYLE TYPE="text/css">
 <!-- 
@@ -49,20 +35,7 @@ background-repeat: no-repeat;
 background-attachment: fixed;} 
 --> 
 </STYLE>
-<hr>
-  <div style="margin:0 auto;width:600px;">
-  
-  <p>我的空挡<p>
-  <table class="table" >
-  <tr>
-  <th>日期</th>
-  <th>时间</th>
-  <th>事件</th>
-  <th>总人数</th>
-  <th>已预约人数</th>
-  <th>取消预约</th>
-  <th>查看预约</v>
-  </tr>
+
     <%
      dbconnection d = new dbconnection();
      Connection t = d.getConnection();
@@ -75,6 +48,33 @@ background-attachment: fixed;}
 			e.printStackTrace();
 		}
 	 Teacher te=(Teacher)request.getSession().getAttribute("teacher");
+	 if(te==null)
+	 {
+	 %>
+	  <p> 教师端未登录<p>
+	 <input type=button value=后退 onclick="window.history.go(-1)">
+	 <%
+	 String url=request.getHeader("Referer"); 
+	 System.out.println(url);
+	 }
+	 else
+	 {
+	 %>
+	 <hr>
+  <div style="margin:0 auto;width:600px;">
+  
+  <p>我的空挡<p>
+  <table class="table" >
+  <tr>
+  <th>日期</th>
+  <th>时间</th>
+  <th>事件</th>
+  <th>总人数</th>
+  <th>已预约人数</th>
+  <th>取消预约</th>
+  <th>查看预约</th>
+  </tr>
+	 <% 
 	 String teacherid=te.getTeacherid();
 	 ResultSet rs=null;
 	 ResultSet rs1=null;
@@ -103,18 +103,22 @@ background-attachment: fixed;}
 		<td><%=rs.getString(5)%></td>
 		<td><a href="Mybooktdele.jsp?name=<%=rs.getString(1)%>"> 取消</a> </td> 
 		<td><a href="Mybooktview.jsp?name=<%=rs.getString(1)%>"> 查看</a> </td> 
-		<% 
+		<%
 		}
 		}catch (Exception E) {
 		E.printStackTrace();	
 	     }
 	     %>
-	     </table>
+	          </table>
 	     <div style="margin:0 auto;width:200px;">
 	      <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='successt.jsp'" style="width: 216px; ">
       返回
    </button>
    </div>
   	</div>
+  	<%} %>
+	    
+	     
+	
   </body>
 </html>

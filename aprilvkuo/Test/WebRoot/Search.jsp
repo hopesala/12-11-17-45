@@ -5,17 +5,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 %>
 <%@ page import ="com.ht.servlet.*"%>
 <%@ page import="java.sql.*"%>
-<!-- 新 Bootstrap 核心 CSS 文件 -->
-<link href="http://apps.bdimg.com/libs/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- 可选的Bootstrap主题文件（一般不使用） -->
-<script src="http://apps.bdimg.com/libs/bootstrap/3.0.3/css/bootstrap-theme.min.css"></script>
-
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
-
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="http://apps.bdimg.com/libs/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -37,6 +27,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 <body>
+  <jsp:include  page="MyJsp.jsp"/>
+  <STYLE TYPE="text/css">
+<!-- 
+BODY {background-image: URL(image/snow.jpg); 
+background-position: center; 
+background-repeat: no-repeat; 
+background-attachment: fixed;} 
+--> 
+</STYLE>
+  <%  Student st=(Student)request.getSession().getAttribute("account");
+  if(st==null)
+	 {
+	 %>
+	  <p> 学生端未登录<p>
+	 <input type=button value=后退 onclick="window.history.go(-1)">
+	 <%
+	 }
+	 else
+	 {
+	 %>
  <form method="POST" action="search" class="well form-search">
 <div style="margin:0 auto;width:600px;">
 <span class="glyphicon glyphicon-user" style="color: rgb(216, 104, 141); font-size: 25px;">
@@ -97,19 +107,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	  
 	}
 	}
+	
 %>
 <hr>
 </span>
 </div>
 
-<STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/snow.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
+
 
 
 
@@ -133,7 +137,7 @@ background-attachment: fixed;}
 
  
 </span>
-
+<%} %>
 
 
  </form>

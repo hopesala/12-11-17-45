@@ -16,9 +16,9 @@ public class dbconnection {
 	       System.out.println("找不到驱动程序类 ，加载驱动失败！");   
 	       e1.printStackTrace() ;   
 	       } 
-	   String url = "jdbc:mysql://localhost:3306/test" ;    
+	   String url = "jdbc:mysql://localhost:3306/bsystem" ;    
        String username = "root" ;   
-       String password = "root" ;   
+       String password = "123456" ;   
 	       try{   
 	        con = DriverManager.getConnection(url , username , password ) ;
 	       }catch(SQLException se){   
