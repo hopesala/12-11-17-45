@@ -37,7 +37,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 <body>
- teacher:
+ <form method="POST" action="search" class="well form-search">
+<div style="margin:0 auto;width:600px;">
+<span class="glyphicon glyphicon-user" style="color: rgb(216, 104, 141); font-size: 25px;">
+可选老师列表[可点击老师姓名立即预约]：<br>
+<hr>
  <%
  int teacher[];
  teacher=new int [5];
@@ -65,6 +69,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    if(Integer.valueOf(rs.getString(4))>Integer.valueOf(rs.getString(5))) {
 	    for(int j=0;j<=i;j++)
 	    {
+	    flag='1';
 	    if(teacherid==teacher[j])
 	    {
 	    flag='0';
@@ -83,16 +88,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     String sql="select * from  teacher  where teacherid=\""+teacherid+"\";";
     ResultSet rs1=null;
 	rs1=stmt.executeQuery(sql);
+
 	while(rs1.next())
 	{
 	%>
 	<a href="search?name=<%=rs1.getString(4)%>"><%=rs1.getString(4) %></a> 
 	<% 
-	    out.print(rs1.getString(4));
+	  
 	}
 	}
 %>
-
+<hr>
+</span>
+</div>
 
 <STYLE TYPE="text/css">
 <!-- 
@@ -106,9 +114,11 @@ background-attachment: fixed;}
 
 
 
- <form method="POST" action="search" class="well form-search">
+
  <hr>
+ 
 <div style="margin:0 auto;width:700px;">
+
 <span class="glyphicon glyphicon-search" style="color: rgb(216, 104, 141); font-size: 35px;"> 输入您想要预约的教师的名字:
 <br><br>
 
@@ -116,9 +126,10 @@ background-attachment: fixed;}
 	 <button type="submit" class="btn btn-primary btn-lg" style="width: 264px; height: 50px ">查找</button>
 	 <footer>
         <p>&copy; hopesala 2014</p>
-      </footer>  
+      </footer> 
+      
 	 </div> 
-	 
+	
 
  
 </span>

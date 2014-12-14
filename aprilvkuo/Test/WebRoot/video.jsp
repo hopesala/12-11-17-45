@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'searchfa.jsp' starting page</title>
+    <title>My JSP 'video.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,8 +22,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   
-  <body>
-    <script type="text/javascript" >alert("没找到该教师,请重新输入老师姓名！")</script>
-      <jsp:include  page="Search.jsp"/>
+    <body>
+  <jsp:include  page="MyJsp.jsp"/>
+    校园预约宣传视频<br>
+    <embed src="http://player.youku.com/player.php/sid/XNzQ4MDgwMTgw/v.swf" allowFullScreen="true" quality="high" width="720" height="600" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
   </body>
 </html>

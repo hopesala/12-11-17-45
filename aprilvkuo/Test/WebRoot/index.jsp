@@ -4,22 +4,7 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<!-- 新 Bootstrap 核心 CSS 文件 -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
 
-
-<!-- 可选的Bootstrap主题文件（一般不使用） -->
-<script src="css/bootstrap-theme.min.css"></script>
-
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="js/jquery.js"></script>
-
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="js/bootstrap.min.js"></script>
-<!--
-
-//-->
-</script>
 
 
 
@@ -42,6 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+  <jsp:include  page="MyJsp.jsp"/>
   
   <STYLE TYPE="text/css">
 <!-- 
@@ -57,32 +43,9 @@ background-attachment: fixed;}
 	
 </div>  
 
-<ul id="myTab" class="nav nav-tabs">
-   <li class="active"><a href="#home" data-toggle="tab">
-      主         页</a></li>
-   <li><a href="#ios" data-toggle="tab">宣传视频</a></li>
-   <li class="dropdown">
-      <a href="poster.html" id="myTabDrop1" class="dropdown-toggle" 
-         data-toggle="dropdown">
-         联系我们</a>
-     
-   </li>
-</ul>
-<div id="myTabContent" class="tab-content">
-   <div class="tab-pane fade in active" id="home">
 
-   </div>
-   <div class="tab-pane fade" id="ios">
-   <embed src="http://player.youku.com/player.php/sid/XNzQ4MDgwMTgw/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
-      <p>本视频由HOpesala团队倾情奉献</p>
-   </div>
 
-  
-</div>
-<ol class="breadcrumb">
-  <li><a href="poster.html">宣传海报</a></li>
-  <li><a href="video.html">宣传视频</a></li>
-</ol>
+
 <script>
    $(function(){
       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {

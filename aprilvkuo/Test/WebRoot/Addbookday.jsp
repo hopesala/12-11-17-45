@@ -3,13 +3,13 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
+<%@ page import ="com.ht.servlet.*"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'searchfa.jsp' starting page</title>
+    <title>My JSP 'book1.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -23,7 +23,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <script type="text/javascript" >alert("没找到该教师,请重新输入老师姓名！")</script>
-      <jsp:include  page="Search.jsp"/>
+   <form action="Addbook.jsp">
+  <select name="day">
+ <%
+ for (int i = 1; i <= 7; i++) { 
+   
+   %> 
+    <option value="<%=i %>" ><%=i%></option>
+    <% 
+   }%>
+ </select>
+ <input type="submit">
+ </form>
   </body>
 </html>

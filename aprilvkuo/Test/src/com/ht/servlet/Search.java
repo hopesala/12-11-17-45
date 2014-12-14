@@ -31,6 +31,7 @@ public class Search extends HttpServlet {
  public void doGet(HttpServletRequest req, HttpServletResponse resp)
    throws ServletException, IOException {
    HttpSession session = req.getSession();
+  
    String name = req.getParameter("name");
    byte b[]=name.getBytes("ISO-8859-1");
    name=new String(b,"UTF-8");
@@ -94,7 +95,8 @@ public class Search extends HttpServlet {
 							j++;
 							
 						}
-						
+	
+				
 						session.setAttribute("tt", tt);
 						session.setAttribute("ttw", ttw);
 						session.setAttribute("j", String.valueOf(j));
@@ -106,8 +108,11 @@ public class Search extends HttpServlet {
 			
 }
 			else
+			{
+				
 				resp.sendRedirect("searchfa.jsp");
-			
+				
+			}			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
