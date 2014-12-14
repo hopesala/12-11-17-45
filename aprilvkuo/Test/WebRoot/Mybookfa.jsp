@@ -25,8 +25,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    已经预约. <br>
     <script>alert("您已经预约成功，请不要重复预约！")</script>
-    <jsp:include  page="Mybook.jsp"/>
+        <jsp:include  page="Mybook.jsp"/>
+  
   </body>
 </html>

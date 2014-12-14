@@ -42,7 +42,7 @@ background-attachment: fixed;}
  <div style="margin:0 auto;width:900px;">
 
  <span class="glyphicon glyphicon-info-sign" style="color: rgb(216, 104, 141); font-size: 35px;"> 
- 该教师可预约的日期有<%=ttw.getNum()%>天 <select name="time">
+ 该老师可预约的日期有<%=ttw.getNum()%>天 <select name="time">
  <%
  for (int i = 1; i <= ttw.getNum();) {
    String time=ttw.getTime();
@@ -92,7 +92,7 @@ int Num=Integer.valueOf((String)session.getAttribute("j"));
  	{%>
  	<tr class="success">
  	<td><%=time %></td>
- 	<td><%=tt[i].getTeachertimeid() %></td>
+ 	<td><%=tt[i].getName() %></td>
     <td><%=tt[i].getStime() %></td>
     
       <td><%=tt[i].getTime() %></td>

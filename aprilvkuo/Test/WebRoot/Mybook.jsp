@@ -49,7 +49,7 @@ background-attachment: fixed;}
 	 {
 	 %>
    <div style="margin:0 auto;width:700px;">
-  <table class="table"><br>
+  <table class="table">
   <caption><font color="red" size="50">查询结果</font></caption>
   <thead>
   <tr>
@@ -62,6 +62,7 @@ background-attachment: fixed;}
   <th>操作</th>
   </tr>
   </thead>
+  <pre class="pre-scrollable">
     <%
      dbconnection d = new dbconnection();
      Connection t = d.getConnection();
@@ -149,6 +150,7 @@ background-attachment: fixed;}
 	     }
 	     %>
 	     </table>
+	     
 	    <div style="margin:0 auto;width:200px;">
 
    </div>

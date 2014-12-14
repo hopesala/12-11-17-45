@@ -23,25 +23,38 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+      <jsp:include  page="MyJsp.jsp"/>
+<STYLE TYPE="text/css">
+<!-- 
+BODY {background-image: URL(image/spring.jpg); 
+background-position: center; 
+background-repeat: no-repeat; 
+background-attachment: fixed;} 
+--> 
+</STYLE>
   <form method="POST" action="Book1">
   <%
   request.setCharacterEncoding("UTF-8");
   String tti=request.getParameter("tti"); 
   session.setAttribute("tti",request.getParameter("tti"));
-  String name = new String(request.getParameter("name").getBytes("ISO8859-1"), "GBK");
-
-  out.print(name);
-
+  String name=request.getParameter("name"); 
+  
+  byte b[]=name.getBytes("ISO-8859-1");
+  name=new String(b,"UTF-8");
   
   String time=request.getParameter("time");
   String week=request.getParameter("week");
  %>
+<div class="container">
+   
+   <p class="text-center">可以设定预约事件</p><br><br>
+   
+    <p class="text-center">预约时间：<%=time %></p><br><br>
+     <p class="text-center"> 教师名字：<%=name %></p><br><br>
+      
+      <br><span class="glyphicon glyphicon-user" style="color: rgb(255, 140, 60); font-size: 35px;">人预约事件:<input type="text" name="thing" style="width: 183px; "></span><br>
 
-  <p>可以设定预约事件<p>
-    <p>预约时间：<%=time %><p>
-      <p>教师名字：<%=name %><p>
- <p>预约事件:<input type="text" name="thing"><br><p>
- 
+ </div>
     <input type="submit" value="预约">
     </form>
     <input type="button" value="返回" onclick="window.location.href='success.jsp'"  style="background:White;width:400px;height:40px;font-size:20px;">

@@ -46,12 +46,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </a>
             <ul class="dropdown-menu">
                <li><a href="Logint.jsp">登录</a></li>
+               <li class="divider"></li>
                <li><a href="Mybookt.jsp">我的预约</a></li>
+               <li class="divider"></li>
                <li><a href="Addbook.jsp">添加预约</a></li>
-               <li class="divider"></li>
-               <li><a href="#">分离的链接</a></li>
-               <li class="divider"></li>
-               <li><a href="#">另一个分离的链接</a></li>
             </ul>
          </li>
           <li class="dropdown">
@@ -61,7 +59,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </a>
             <ul class="dropdown-menu">
                <li><a href="poster.jsp">宣传海报</a></li>
-               <li><a href="video.jsp">宣传视频</a></li><li><a href="video.jsp">宣传视频</a></li>
+               <li class="divider"></li>
+               <li><a href="video.jsp">宣传视频</a></li>
+               <li class="divider"></li>
+               <li><a href="aboutus.jsp">关于我们</a></li>
                
             </ul>
          </li>
