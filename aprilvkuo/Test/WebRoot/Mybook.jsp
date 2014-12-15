@@ -21,6 +21,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+	<style> 
+div
+{
+border:2px solid #a1a1a1;
+padding:10px 40px; 
+background:#dddddd;
+width:300px;
+border-radius:25px;
+}
+</style>
 
   </head>
   
@@ -40,7 +50,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	 else
 	 {
 	 %>
-   <div style="margin:0 auto;width:700px;">
+	 <div>
+
   <table class="table">
   <caption><font color="red" size="50">查询结果</font></caption>
   <thead>
@@ -126,6 +137,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		 <td><%=rs2.getString(4) %></td>
 		 <td><a href="Mybookdele.jsp?name=<%=teachertimeid%>"> 取消</a> </td> 
 		 </tr>
+		 
 		<% 	
 		}
 		}catch (Exception E) {
@@ -141,6 +153,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	     }
 	     }
 	     %>
+	   
 	      </tbody>
 	     </table>
 	     

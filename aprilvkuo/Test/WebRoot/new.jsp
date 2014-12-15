@@ -19,7 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </style>
 </head>
 <body>
-
+  	  <jsp:include  page="MyJsp.jsp"/>
 
 
 <div id="grad1"></div>

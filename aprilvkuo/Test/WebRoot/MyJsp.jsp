@@ -10,17 +10,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 <head>
    <title>Bootstrap 实例 - 默认的导航栏</title>
-   <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-   <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-     <STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/book.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
+  <link rel="stylesheet" type="text/css" href="js/jquery.dropdown.css" media="screen" />
+  <script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+  <script type="text/javascript" src="js/jquery.dropdown.js"></script>
+
+
 
 </head>
 
