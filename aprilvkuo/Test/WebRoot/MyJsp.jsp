@@ -6,19 +6,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <%@ page import ="com.ht.servlet.*"%>
 <%@ page import="java.sql.*"%>
 
+
 <!DOCTYPE html>
 <html>
 <head>
    <title>Bootstrap 实例 - 默认的导航栏</title>
-  <link rel="stylesheet" type="text/css" href="js/jquery.dropdown.css" media="screen" />
-  <script type="text/javascript" src="js/jquery-2.0.3.js"></script>
-  <script type="text/javascript" src="js/jquery.dropdown.js"></script>
+   
 
-
-
+   <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+     <STYLE TYPE="text/css">
+<!-- 
+BODY {background-image: URL(image/book.jpg); 
+background-position: center; 
+background-repeat: no-repeat; 
+background-attachment: fixed;} 
+--> 
+</STYLE>
 </head>
-
 <body>
+
+
 <nav class="navbar navbar-default" role="navigation">
    <div class="navbar-header">
       <a class="navbar-brand" href="#">校园预约</a>
@@ -26,6 +35,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    <div>
       <ul class="nav navbar-nav">
          <li class="active"><a href="index.jsp">主页</a></li>
+         
          <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                学生端 
@@ -33,13 +43,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </a>
             <ul class="dropdown-menu">
                <li><a href="Login.jsp">登录</a></li>
-                   <li class="divider"></li>
                <li><a href="Mybook.jsp">我的预约</a></li>
-                   <li class="divider"></li>
                <li><a href="Search.jsp">查询预约</a></li>
-            
-           
-              
+             
             </ul>
          </li>
          <li class="dropdown">
@@ -49,10 +55,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </a>
             <ul class="dropdown-menu">
                <li><a href="Logint.jsp">登录</a></li>
-               <li class="divider"></li>
                <li><a href="Mybookt.jsp">我的预约</a></li>
-               <li class="divider"></li>
                <li><a href="Addbook.jsp">添加预约</a></li>
+
             </ul>
          </li>
           <li class="dropdown">
@@ -62,14 +67,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </a>
             <ul class="dropdown-menu">
                <li><a href="poster.jsp">宣传海报</a></li>
-               <li class="divider"></li>
-               <li><a href="video.jsp">宣传视频</a></li>
-               <li class="divider"></li>
-               <li><a href="aboutus.jsp">关于我们</a></li>
+               <li><a href="video.jsp">宣传视频</a></li><li><a href="video.jsp">宣传视频</a></li>
                
             </ul>
          </li>
-         <%
+           <%
          Teacher te=(Teacher)request.getSession().getAttribute("teacher");
          Student st=(Student)request.getSession().getAttribute("account");
          String status=null;
@@ -97,10 +99,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           %>
            <li><a href="logout.jsp">注销</a></li>
          
+    
       </ul>
    </div>
 </nav>
-  
 
 </body>
 </html>			

@@ -25,14 +25,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <jsp:include  page="MyJsp.jsp"/>
-<STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/spring.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
+<div class="panel panel-default">
+   <div class="panel-body">
   <br><br>
   <form action="" method="post">
 <% Teachertime[] tt=(Teachertime[])session.getAttribute("tt");
@@ -128,7 +122,7 @@ int Num=Integer.valueOf((String)session.getAttribute("j"));
 
 
 </div>
- 	
+ 	</div>
 	
   </body>
 </html>

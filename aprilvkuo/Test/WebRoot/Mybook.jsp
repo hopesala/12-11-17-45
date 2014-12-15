@@ -21,21 +21,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-	<style> 
-div
-{
-border:2px solid #a1a1a1;
-padding:10px 40px; 
-background:#dddddd;
-width:300px;
-border-radius:25px;
-}
-</style>
+
 
   </head>
   
   <body>
     <jsp:include  page="MyJsp.jsp"/>
+    
+
+
+
+
+    
+
 <%  Student st=(Student)request.getSession().getAttribute("account");
   if(st==null)
 	 {
@@ -51,9 +49,14 @@ border-radius:25px;
 	 {
 	 %>
 	 <div>
-
+<div class="panel panel-danger">
+   <div class="panel-heading">
+      <h3 class="panel-title">
+        <center>查询结果</center>
+      </h3>
+   </div>
   <table class="table">
-  <caption><font color="red" size="50">查询结果</font></caption>
+  
   <thead>
   <tr>
   <th>日期</th>
@@ -156,6 +159,10 @@ border-radius:25px;
 	   
 	      </tbody>
 	     </table>
+	        <div class="panel-body">
+  
+   </div>
+</div>
 	     
 	
 	     </div>
