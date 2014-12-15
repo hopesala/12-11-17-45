@@ -31,21 +31,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+<<<<<<< HEAD
   <jsp:include  page="MyJsp.jsp"/>
 
+=======
+>>>>>>> parent of 7c09c06... 界面优化
   <form method="POST" action="Book1">
   <%
   request.setCharacterEncoding("UTF-8");
   String tti=request.getParameter("tti"); 
   session.setAttribute("tti",request.getParameter("tti"));
-  String name=request.getParameter("name"); 
-  
-  byte b[]=name.getBytes("ISO-8859-1");
-  name=new String(b,"UTF-8");
+  String name = new String(request.getParameter("name").getBytes("ISO8859-1"), "GBK");
+
+  out.print(name);
+
   
   String time=request.getParameter("time");
   String week=request.getParameter("week");
  %>
+<<<<<<< HEAD
 <div class="container">
    <div style="margin:0 auto;width:600px;">
    <hr>
@@ -64,6 +68,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </div>
     </div>
     
+=======
+
+  <p>可以设定预约事件<p>
+    <p>预约时间：<%=time %><p>
+      <p>教师名字：<%=name %><p>
+ <p>预约事件:<input type="text" name="thing"><br><p>
+ 
+    <input type="submit" value="预约">
+>>>>>>> parent of 7c09c06... 界面优化
     </form>
     
    

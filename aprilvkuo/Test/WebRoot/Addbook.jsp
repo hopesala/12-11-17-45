@@ -23,7 +23,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	-->
   </head>
   <link href="css/bootstrap.min.css" rel="stylesheet">
+<<<<<<< HEAD
 <script language="javascript" type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
+=======
+
+
+<!-- 可选的Bootstrap主题文件（一般不使用） -->
+>>>>>>> parent of 7c09c06... 界面优化
 <script src="css/bootstrap-theme.min.css"></script>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>

@@ -51,8 +51,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		E.printStackTrace();	
 	     }
 	%>
-
+           空挡取消成功. <br>
     <jsp:include  page="Mybook.jsp"/>
-               <h1>空挡取消成功.</h1><br>
   </body>
 </html>

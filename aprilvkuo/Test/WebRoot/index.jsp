@@ -23,6 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+<<<<<<< HEAD
 <style>
 <!--
 body{
@@ -34,6 +35,10 @@ filter:progid:DXImageTransform.microsoft.gradient(gradienttype=0,startColorStr=b
 </style>
 
 </head>
+=======
+
+  </head>
+>>>>>>> parent of 7c09c06... 界面优化
   
   <body>
   <jsp:include  page="MyJsp.jsp"/>
@@ -84,14 +89,14 @@ filter:progid:DXImageTransform.microsoft.gradient(gradienttype=0,startColorStr=b
 </div> 
    
    
-     <hr><br><br><br><br>
-<div style="margin:0 auto;width: 400px; height: 167px">
-<form class="well form-search" style="width: 401px; ">
-<p style="width: 391px; height: 46px">
-   <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='registert.jsp'" style="width: 174px; ">
+     <hr>
+<div style="margin:0 auto;width: 273px; height: 167px">
+<form class="well form-search">
+<p>
+   <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='registert.jsp'" >
       教师注册
    </button>
-   <button type="button" class="btn btn-lg" onclick="window.location.href='Logint.jsp'" style="width: 178px; ">
+   <button type="button" class="btn btn-lg" onclick="window.location.href='Logint.jsp'" style="width: 119px; ">
       教师登录
    </button>
 </p>
@@ -101,10 +106,10 @@ filter:progid:DXImageTransform.microsoft.gradient(gradienttype=0,startColorStr=b
 
 
 <p>
-   <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='register.jsp'" style="width: 174px; ">
+   <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='register.jsp'">
       学生注册
    </button>
-   <button type="button" class="btn  btn-lg" onclick="window.location.href='Login.jsp'" style="width: 148px; width: 178px;" >
+   <button type="button" class="btn  btn-lg" onclick="window.location.href='Login.jsp'" style="width: 119px; ">
       学生登录
    </button>
 </p>
@@ -113,6 +118,7 @@ filter:progid:DXImageTransform.microsoft.gradient(gradienttype=0,startColorStr=b
 </div>
 <hr>
 
+<<<<<<< HEAD
 <script>/*========================================================*/  
 /* Light Loader
 /*========================================================*/
@@ -317,6 +323,8 @@ if(isCanvasSupported){
   cl.init();
 }
 </script>
+=======
+>>>>>>> parent of 7c09c06... 界面优化
 
   </body>
 </html>

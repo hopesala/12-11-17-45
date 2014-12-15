@@ -57,7 +57,14 @@ background-attachment: fixed;}
                <li><a href="Logint.jsp">登录</a></li>
                <li><a href="Mybookt.jsp">我的预约</a></li>
                <li><a href="Addbook.jsp">添加预约</a></li>
+<<<<<<< HEAD
 
+=======
+               <li class="divider"></li>
+               <li><a href="#">分离的链接</a></li>
+               <li class="divider"></li>
+               <li><a href="#">另一个分离的链接</a></li>
+>>>>>>> parent of 7c09c06... 界面优化
             </ul>
          </li>
           <li class="dropdown">

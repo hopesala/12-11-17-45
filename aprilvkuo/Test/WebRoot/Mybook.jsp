@@ -48,6 +48,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	 else
 	 {
 	 %>
+<<<<<<< HEAD
 	 <div>
 <div class="panel panel-danger">
    <div class="panel-heading">
@@ -57,6 +58,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    </div>
   <table class="table">
   
+=======
+   <div style="margin:0 auto;width:700px;">
+  <table class="table"><br>
+  <caption><font color="red" size="50">查询结果</font></caption>
+>>>>>>> parent of 7c09c06... 界面优化
   <thead>
   <tr>
   <th>日期</th>
@@ -68,7 +74,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <th>操作</th>
   </tr>
   </thead>
+<<<<<<< HEAD
   <tbody>
+=======
+>>>>>>> parent of 7c09c06... 界面优化
     <%
      dbconnection d = new dbconnection();
      Connection t = d.getConnection();
@@ -159,8 +168,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	   
 	      </tbody>
 	     </table>
+<<<<<<< HEAD
 	        <div class="panel-body">
   
+=======
+	    <div style="margin:0 auto;width:200px;">
+
+>>>>>>> parent of 7c09c06... 界面优化
    </div>
 </div>
 	     
