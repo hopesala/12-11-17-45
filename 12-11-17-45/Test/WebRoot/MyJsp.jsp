@@ -25,7 +25,7 @@ background-attachment: fixed;}
 <body>
 
 
-<nav class="navbar navbar-default " role="navigation">
+<nav class="navbar navbar-default " >
    <div class="navbar-header">
       <a class="navbar-brand" >校园预约</a>
    </div>
@@ -73,7 +73,7 @@ background-attachment: fixed;}
             <ul class="dropdown-menu">
                <li><a href="poster.jsp">宣传海报</a></li>
                <li><a href="video.jsp">宣传视频</a></li>
-               <li><a href="video.jsp">宣传视频</a></li>
+               <li><a href="aboutus.jsp">About us</a></li>
                
             </ul>
          </li>

@@ -14,14 +14,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
 <body>
   <jsp:include  page="MyJsp.jsp"/>
-    <STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/book.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
+
   <%
     Teacher te=(Teacher)request.getSession().getAttribute("teacher");
     Student st=(Student)request.getSession().getAttribute("account");

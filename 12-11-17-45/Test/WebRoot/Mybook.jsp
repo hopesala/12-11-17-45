@@ -50,7 +50,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <tr>
   <th>日期</th>
   <th>时间</th>
-  <th>事件</th>
+  <th>事件和地点</th>
   <th>总人数</th>
   <th>已预约人数</th>
   <th>老师姓名</th>
@@ -145,12 +145,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	     %>
 	     </table>
    </div>
-   <wbr>
-   <hr>
    
-      <button type="button" class="btn btn-warning btn-lg" onclick="window.location.href=-1" style="width: 230px;margin-top:10px; margin-left:1100px;  margin-bottom:10px; ">
-      返回
-   </button>
+   <hr>
+   <button type="button" class="btn btn-info" onclick="window.history.go(-1)" style="width: 133px; ">返回</button>
+   
+  
 
 	   
   </body>

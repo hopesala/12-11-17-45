@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'Mybookdele.jsp' starting page</title>
+    <title>我的预约</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -53,6 +53,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	%>
 
     <jsp:include  page="Mybook.jsp"/>
-               空挡取消成功. <br>
+ <script>alert("预约取消成功");</script>
   </body>
 </html>

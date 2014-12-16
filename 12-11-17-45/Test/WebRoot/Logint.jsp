@@ -20,14 +20,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
 <body>
   <jsp:include  page="MyJsp.jsp"/>
-  <STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/book.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
+
 
 <%
     Teacher te=(Teacher)request.getSession().getAttribute("teacher");
@@ -38,7 +31,7 @@ background-attachment: fixed;}
 
 <div id="myAlert" class="alert alert-warning">
    <a href="#" class="close" data-dismiss="alert">&times;</a>
-   <strong>警告！</strong>教师端已经登陆。
+   <strong>警告！</strong>教师端已经登陆，请先注销再登陆。
 </div>
 <% 
 	 }
@@ -48,7 +41,7 @@ background-attachment: fixed;}
 
 <div id="myAlert" class="alert alert-warning">
    <a href="#" class="close" data-dismiss="alert">&times;</a>
-   <strong>警告！</strong>学生端已经登陆。
+   <strong>警告！</strong>学生端已经登陆，请先注销再登陆。
 </div>
 <% 
 }
@@ -58,19 +51,21 @@ else
  %>
  
 
- 
+ <hr>
  
 <div style="margin:0 auto;width:200px;">
 <span class="glyphicon glyphicon-user" style="color: rgb(55, 160, 189); font-size: 35px;">教师登录</span>
 </div>   
     
     <hr>
-<div style="margin:0 auto;width:300px;">
+
     <form action="Loginpage.jsp" onsubmit="return check()" name="form1">
+    <div style="margin:0 auto;width:300px;">
     <span class="glyphicon glyphicon-log-in" style="color: rgb(255, 140, 60); font-size: 22px;">用户名</span>
              <input type="text" name="username"><br>
     <span class="glyphicon glyphicon-lock" style="color: rgb(55, 160, 189); font-size: 22px;">密       码</span>
              <input type="password" name="pwd"><br>
+             </div>
 
 
 <div style="margin:0 auto;width:300px;">

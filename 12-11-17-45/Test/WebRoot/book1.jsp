@@ -23,7 +23,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  <form action="Mybookadd2.jsp">
+    <jsp:include  page="MyJsp.jsp"/>
+     <div style="margin:0 auto;width: 500px; height: 300px">
+    <form action="Mybookadd2.jsp"  style="width: 600px; ">
+ 
   <%
   String tti=request.getParameter("tti"); 
   session.setAttribute("tti",request.getParameter("tti"));
@@ -33,14 +36,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   String time=request.getParameter("time");
   String week=request.getParameter("week");
  %>
-
-  <p>可以设定预约事件<p>
-    <p>预约时间：<%=time %><p>
-      <p>教师名字：<%=name %><p>
- <p>预约事件:<input type="text" name="thing"><br><p>
+<div class="well well-lg">
+    <span style="color: rgb(0, 0, 0); font-size: 25px;"> 可以设定预约事件</span><br><br>
+         <span class="glyphicon glyphicon-lock" style="color: rgb(0, 0, 0); font-size: 25px;">预约时间:</span> 
+         <span  style="color: rgb(50, 100, 100); font-size: 25px;"><%=time %>  </span><br><br>
+         <span class="glyphicon glyphicon-user" style="color: rgb(0, 0, 0); font-size: 25px;">教师名字:</span> 
+         <span  style="color: rgb(50, 100, 100); font-size: 25px;"><%=name %>  </span><br><br>
+         <span class="glyphicon glyphicon-lock" style="color: rgb(0, 0, 0); font-size: 25px;">预约事件和地点:<br><br><input type="text" name="thing" style="width: 300px; "></span><br><br>
+           <input type="submit" class="btn btn-success btn-lg" value="预约" >
+           <a class="btn btn-default btn-lg" href="success.jsp" role="button" >返回</a>
  
-    <input type="submit" value="预约">
+
+</div>
     </form>
-    <input type="button" value="返回" onclick="window.location.href='success.jsp'"  style="background:White;width:400px;height:40px;font-size:20px;">
+    </div>
+   
   </body>
 </html>

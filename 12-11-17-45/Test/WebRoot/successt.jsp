@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'index.jsp' starting page</title>
+    <title>我的主页</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -20,18 +20,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+
   </head>
   
 <body>
   <jsp:include  page="MyJsp.jsp"/>
-<STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/snow.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
+
 <hr>
      <%Teacher te=(Teacher)session.getAttribute("teacher");
   if(te==null)
@@ -50,23 +44,23 @@ background-attachment: fixed;}
 	 %>
 
      <div style="margin:0 auto;width:600px;">
-  <span class="glyphicon glyphicon-hand-right" style="color: rgb(55, 160, 189); font-size: 50px;"> 欢迎您【<%=te.getName() %>】老师</span>
+  <span class="glyphicon glyphicon-hand-right" style="color: rgb(200, 200, 200); font-size: 50px;"> 欢迎您【<%=te.getName() %>】老师</span>
    </div>
      <hr>
    <br>
    <div style="margin:0 auto;width:400px;">
-   <span class="glyphicon glyphicon-plus" style="color: rgb(55, 160, 189); font-size: 35px;"></span>
-    <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='Addbook.jsp'" style="width: 216px; ">
+   <span class="glyphicon glyphicon-plus" style="color: rgb(200, 160, 189); font-size: 40px;"></span>
+    <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='Addbook.jsp'" style="width: 230px; ">
       添加空挡
    </button>
    <br>
-   <span class="glyphicon glyphicon-list-alt" style="color: rgb(55, 104, 141); font-size: 35px;"></span>
-   <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='Mybookt.jsp'" style="width: 216px; ">
+   <span class="glyphicon glyphicon-list-alt" style="color: rgb(300, 104, 141); font-size: 40px;"></span>
+   <button type="button" class="btn btn-success btn-lg" onclick="window.location.href='Mybookt.jsp'" style="width: 230px; ">
       我的空挡
    </button>
    <br>
-   <span class="glyphicon glyphicon-chevron-left" style="color: rgb(55, 104, 141); font-size: 35px;"></span>
-   <button type="button" class="btn btn-primary btn-lg" onclick="window.location.href='Logint.jsp'" style="width: 216px; ">
+   <span class="glyphicon glyphicon-chevron-left" style="color: rgb(400, 200, 141); font-size: 40px;"></span>
+   <button type="button" class="btn btn-warming btn-lg" onclick="window.location.href='Logint.jsp'" style="width: 230px; ">
       返回
    </button>
 

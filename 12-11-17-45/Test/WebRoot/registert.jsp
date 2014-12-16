@@ -3,21 +3,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<!-- 新 Bootstrap 核心 CSS 文件 -->
-<link href="http://apps.bdimg.com/libs/bootstrap/3.0.3/css/bootstrap.min.css" 
 
-rel="stylesheet">
-
-<!-- 可选的Bootstrap主题文件（一般不使用） -->
-<script src="http://apps.bdimg.com/libs/bootstrap/3.0.3/css/bootstrap-
-
-theme.min.css"></script>
-
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
-
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script src="http://apps.bdimg.com/libs/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
@@ -38,23 +24,17 @@ theme.min.css"></script>
   
   <body>
     <jsp:include  page="MyJsp.jsp"/>
-  <STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/book.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
   <div style="margin:0 auto;width:300px;">
 <form action="registertpage.jsp"   onsubmit="return check()" name="form1" style="width: 600px; ">
     <br>
-         <span class="glyphicon glyphicon-log-in" style="color: rgb(55, 160, 189); font-size: 30px;">用户名(不能有中文):<input type="text" name="username"></span><br><br>
-         <span class="glyphicon glyphicon-lock" style="color: rgb(55, 160, 189); font-size: 30px;">密  码:<input type="password" name="pwd" ></span><br><br>
-         <span class="glyphicon glyphicon-lock" style="color: rgb(55, 160, 189); font-size: 30px;">确认密码:<input type="password" name="pwd1" style="width: 300px; "></span><br><br>
-         <span class="glyphicon glyphicon-user" style="color: rgb(55, 160, 189); font-size: 30px;">真实姓名:<input type="text" name="name" style="width: 300px; "></span><br>
-         <br><span class="glyphicon glyphicon-lock" style="color: rgb(55, 160, 189); font-size: 30px;">手 机:<input type="text" name="phone"></span><br><br>
-         <span class="glyphicon glyphicon-lock" style="color: rgb(55, 160, 189); font-size: 30px;">邮 箱:<input type="text" name="email"></span><br><br>
+         <span class="glyphicon glyphicon-user" style="color: rgb(55, 160, 189); font-size: 35px;">教师注册</span>
+          <br><br>
+         <span class="glyphicon glyphicon-log-in" style="color: rgb(100, 100, 100); font-size: 25px;">用户名:<input type="text" name="username" style="width: 288px; "><font size=3 color=red>不能有中文字符</font></span><br><br>
+         <span class="glyphicon glyphicon-lock" style="color: rgb(100, 100, 100); font-size: 25px;">密  码:<input type="password" name="pwd" style="width: 288px; "><font size=3 color=red>密码长度必须在6到16个字符之间</font></span><br><br>
+         <span class="glyphicon glyphicon-lock" style="color: rgb(100, 100, 100); font-size: 25px;">确认密码:<input type="password" name="pwd1" style="width: 262px; "></span><br><br>
+         <span class="glyphicon glyphicon-user" style="color: rgb(100, 100, 100); font-size: 25px;">真实姓名:<input type="text" name="name" style="width: 262px; "></span><br><br>
+         <span class="glyphicon glyphicon-lock" style="color: rgb(100, 100, 100); font-size: 25px;">手机:<input type="text" name="phone" style="width: 312px; "><font size=3 color=red>可以不留</font></span><br><br>
+         <span class="glyphicon glyphicon-lock" style="color: rgb(100, 100, 100); font-size: 25px;">邮箱:<input type="text" name="email1" style="width: 312px; "><font size=3 color=red>可以不留</font></span><br><br>
             <br>
              <input type="submit" class="btn btn-success" value="注册" style="width: 458px; ">
 
@@ -66,6 +46,7 @@ var name = document.form1.username;
 var password= document.form1.pwd; 
 var password1= document.form1.pwd1; 
 var truename= document.form1.name;
+var tele= document.form1.phone;
 
 
 if(name.value.length==0){ 
@@ -73,12 +54,9 @@ alert("请输入用户名");
 name.focus(); 
 return false; 
 }
-else if(password.value.length==0) {
-alert("密码不能为空"); 
-password.select(); 
-return false;
-}
-else if(password.value.length==0) {
+else {
+
+if(password.value.length==0) {
 alert("密码不能为空"); 
 password.select(); 
 return false;
@@ -98,7 +76,10 @@ alert("真实姓名不能为空");
 truename.select(); 
 return false;
 }
+
 }
+}
+
  //--></script>  
   
     

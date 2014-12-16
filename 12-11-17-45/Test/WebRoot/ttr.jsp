@@ -25,14 +25,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <jsp:include  page="MyJsp.jsp"/>
-<STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/spring.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
   <br><br>
   <form action="" method="post">
 <% Teachertime[] tt=(Teachertime[])session.getAttribute("tt");
@@ -68,11 +60,14 @@ if(time==null)
 time="";
 int Num=Integer.valueOf((String)session.getAttribute("j"));
  %>
- <div style="margin:0 auto;width:900px;">
- 
+<div class="panel panel-default">
+ <div class="panel-heading">
+      <div class="panel-heading"><font color="grey" size="50"><b>查询结果</b></font></div>
+   </div>
  
  <table class="table">
-   <caption><font color="red" size="50">查询结果</font></caption>
+ 
+  
    <thead>
       <tr>
         <th>日期</th>
@@ -122,7 +117,6 @@ int Num=Integer.valueOf((String)session.getAttribute("j"));
           <%
          }}}}%>
     </tr>
-   </tbody>
 </table>
 
 

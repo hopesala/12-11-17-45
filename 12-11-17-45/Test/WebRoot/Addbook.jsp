@@ -41,14 +41,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <jsp:include  page="MyJsp.jsp"/>
 
   
-<STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/spring.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
 
 <%  Teacher te=(Teacher)request.getSession().getAttribute("teacher");
   if(te==null)
@@ -71,13 +63,13 @@ background-attachment: fixed;}
  </span><br>
  
 
-<br><span class="glyphicon glyphicon-user" style="color: rgb(255, 140, 60); font-size: 35px;">人  数:<input type="text" name="num" style="width: 183px; "></span><br>
-   <br> <span class="glyphicon glyphicon-play" style="color: rgb(255, 140, 60); font-size: 35px;">开始时间:<input id="d5221" name="stime" class="Wdate" type="text" onFocus="var d5222=$dp.$('d5222');WdatePicker({onpicked:function(){d5222.focus();},dateFmt:'H:mm',maxDate:'#F{$dp.$D(\'d5222\')}'})" style="width: 147px; height: 46px"/></span>
-   <br> <span class="glyphicon glyphicon-stop" style="color: rgb(255, 140, 60); font-size: 35px;">结束时间:<input id="d5222" name="etime" class="Wdate" type="text" onFocus="WdatePicker({dateFmt:'H:mm',minDate:'#F{$dp.$D(\'d5221\')}'})" style="width: 147px; height: 46px"/></span>
-      <br>    <br> <span class="glyphicon glyphicon-info-sign" style="color: rgb(255, 140, 60); font-size: 35px;">事件[选填]:<input type="text" name="thing" style="width: 253px; "></span><br>
+<br><span class="glyphicon glyphicon-user" style="color: rgb(255, 140, 60); font-size: 35px;">人  数:<input type="text" name="num" style="width: 306px; height: 52px "></span><br>
+   <br> <span class="glyphicon glyphicon-play" style="color: rgb(255, 140, 60); font-size: 35px;">开始时间:<input id="d5221" name="stime" class="Wdate" type="text" onFocus="var d5222=$dp.$('d5222');WdatePicker({onpicked:function(){d5222.focus();},dateFmt:'H:mm',maxDate:'#F{$dp.$D(\'d5222\')}'})" style="width: 270px; height: 52px"/></span>
+   <br><br>
+   <br> <span class="glyphicon glyphicon-stop" style="color: rgb(255, 140, 60); font-size: 35px;">结束时间:<input id="d5222" name="etime" class="Wdate" type="text" onFocus="WdatePicker({dateFmt:'H:mm',minDate:'#F{$dp.$D(\'d5221\')}'})" style="width: 270px; height: 52px"/></span>
+      <br>    <br> <span class="glyphicon glyphicon-info-sign" style="color: rgb(255, 140, 60); font-size: 35px;">事件与地点[选填]:<br><br>
+      <input type="text" name="thing" style="width: 470px; height: 52px "></span><br>
 
-    
-    </span>
     <div style="margin:0 auto;width:200px;"><br>
    <button type="submit" class="btn btn-primary btn-lg" onclick="window.location.href='Mybookt.jsp'" style="width: 216px; ">
       提交
@@ -85,16 +77,9 @@ background-attachment: fixed;}
    </div>
     </form>
     </div>
-    <div class="clearfix"  style="background: #f8D8D8;border: 0px solid #000;padding: 20px;"></div>
-    <div class="clearfix"  style="background: #e8D8D8;border: 0px solid #000;padding: 20px;"></div>
-    <div class="clearfix"  style="background: #d8D8D8;border: 0px solid #000;padding: 20px;"></div>
-    <div class="clearfix"  style="background: #c8D8D8;border: 0px solid #000;padding: 20px;"></div>
-    <div class="clearfix"  style="background: #b8D8D8;border: 0px solid #000;padding: 20px;"></div>
-    <div class="clearfix"  style="background: #a8D8D8;border: 0px solid #000;padding: 20px;"></div>
-    <div class="clearfix"  style="background: #98D8D8;border: 0px solid #000;padding: 20px;"></div>
-    <div class="clearfix"  style="background: #88D8D8;border: 0px solid #000;padding: 20px;"></div>
-    <div class="clearfix"  style="background: #78D8D8;border: 0px solid #000;padding: 20px;"></div>
-    <div class="clearfix"  style="background: #68D8D8;border: 0px solid #000;padding: 20px;"></div>
+    
+   
+   
     <%} %>
   </body>
 </html>

@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <script type="text/javascript" >alert("没找到该教师,请重新输入老师姓名！")</script>
+    <script type="text/javascript" >alert("没找到该教师,请重新输入老师姓名！");</script>
       <jsp:include  page="Search.jsp"/>
   </body>
 </html>

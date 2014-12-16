@@ -9,7 +9,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>学生预约</title>
+    <title>我的主页</title>
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
 	<meta http-equiv="expires" content="0">    
@@ -18,18 +18,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
+
   </head>
   
 <body>
 <jsp:include  page="MyJsp.jsp"/>
-<STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/snow.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
+
     <%  Student st=(Student)request.getSession().getAttribute("account");
   if(st==null)
 	 {

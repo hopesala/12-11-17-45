@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'Mybook.jsp' starting page</title>
+    <title>我的空挡</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -26,15 +26,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <jsp:include  page="MyJsp.jsp"/>
-  
-  <STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/spring.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
 
     <%
      dbconnection d = new dbconnection();
@@ -64,9 +55,10 @@ background-attachment: fixed;}
 	 {
 	 %>
 	 <hr>
-  <div style="margin:0 auto;width:600px;">
+  	<div class="panel panel-info">
+     <div class="panel-heading"><font color="grey" size="50"><b>我的空挡</b></font></div>
   
-  <p>我的空挡<p>
+  
   <table class="table" >
   <tr>
   <th>日期</th>

@@ -49,7 +49,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	     }
 	%>
 
-    删除成功 <br>
+
     <jsp:include  page="Mybookt.jsp"/>
+    <script type="text/javascript">alert("删除成功"); </script>
   </body>
 </html>

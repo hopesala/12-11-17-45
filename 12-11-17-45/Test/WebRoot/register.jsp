@@ -24,23 +24,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
     <jsp:include  page="MyJsp.jsp"/>
-    <STYLE TYPE="text/css">
-<!-- 
-BODY {background-image: URL(image/book.jpg); 
-background-position: center; 
-background-repeat: no-repeat; 
-background-attachment: fixed;} 
---> 
-</STYLE>
-  <div style="margin:0 auto;width:600px;">
-    <form action="registerpage.jsp"  onsubmit="return check()" name="form1" style="width: 1000px; ">
+    
+  <div style="margin:0 auto;width:300px;">
+    <form action="registerpage.jsp"  onsubmit="return check()" name="form1" style="width: 600px; ">
     <br>
+          <span class="glyphicon glyphicon-user" style="color: rgb(55, 160, 189); font-size: 35px;">学生注册</span>
+          <br><br>
          <span class="glyphicon glyphicon-log-in" style="color: rgb(100, 100, 100); font-size: 25px;">用户名:<input type="text" name="username" style="width: 288px; "><font size=3 color=red>不能为中文字符</font></span><br><br>
          <span class="glyphicon glyphicon-lock" style="color: rgb(100, 100, 100); font-size: 25px;">密  码:<input type="password" name="pwd" style="width: 288px; "><font size=3 color=red>密码长度至少为6</font></span><br><br>
          <span class="glyphicon glyphicon-lock" style="color: rgb(100, 100, 100); font-size: 25px;">确认密码:<input type="password" name="pwd1" style="width: 262px; "></span><br><br>
          <span class="glyphicon glyphicon-user" style="color: rgb(100, 100, 100); font-size: 25px;">真实姓名:<input type="text" name="name" style="width: 262px; "></span><br><br>
          <span class="glyphicon glyphicon-lock" style="color: rgb(100, 100, 100); font-size: 25px;">手机:<input type="text" name="phone" style="width: 312px; "><font size=3 color=red>可以不留</font></span><br><br>
-         <span class="glyphicon glyphicon-lock" style="color: rgb(100, 100, 100); font-size: 25px;">邮箱:<input type="text" name="email1" style="width: 150px; "> @ <input type="text" name="email2" style="width: 100px; "><font size=3 color=red>可以不留</font></span><br><br>
+         <span class="glyphicon glyphicon-lock" style="color: rgb(100, 100, 100); font-size: 25px;">邮箱:<input type="text" name="email" style="width: 312px; "><font size=3 color=red>可以不留</font></span><br><br>
+            <br>
              <input type="submit" class="btn btn-success" value="注册" style="width: 458px; ">
 
     </form>

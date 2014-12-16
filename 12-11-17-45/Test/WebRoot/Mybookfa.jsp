@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>My JSP 'Mybookfa.jsp' starting page</title>
+    <title>我的预约</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -25,8 +25,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    已经预约. <br>
-    <script>alert("您已经预约成功，请不要重复预约！")</script>
+    <script>alert("您已经预约成功，请不要重复预约！");</script>
     <jsp:include  page="Mybook.jsp"/>
   </body>
 </html>

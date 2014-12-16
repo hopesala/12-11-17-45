@@ -36,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   student.setPassword(pwd);
   student.setUsername(username);
   student.setEmail(email);
-  student.setPhone(username);
+  student.setPhone(phone);
   student.setupcheck();
   if(student.isIsexi()==false)
    {
